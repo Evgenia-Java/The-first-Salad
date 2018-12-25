@@ -1,0 +1,11 @@
+public class Peel_and_chop extends Ingredients{
+	
+	Peel_and_chop(String name, int gram) {
+		super(name, gram);
+	}
+	
+	@Override
+	public String cooking() {
+		return "Peel and chop";
+	}
+}
