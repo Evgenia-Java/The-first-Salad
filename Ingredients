@@ -1,0 +1,111 @@
+public abstract class Ingredients {
+
+	protected String name;
+	protected int proteins;
+	protected int fats;
+	protected int carbohydrates;
+	protected int kcal;
+	protected int gram;
+	protected List l = List.ingr;
+	protected enum List {
+		ingr,
+		Chicken,
+		Turkey,
+		Veal,
+		Beijing_cabbage,
+		Сucumber,
+		Avocado,
+		Linseed_oil,
+		Ginger_oil,
+		Teos
+	}
+	
+	Ingredients(String name, int gram){
+		this.name = name;
+		this.gram = gram;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	int getGram() {
+		return gram;
+	}
+	
+	abstract String cooking();
+	
+	public int kcal() {
+		int finish = 0;
+		switch (List.valueOf(name)) {
+		case Chicken:
+			proteins = 23;
+			fats = 1;
+			carbohydrates = 0;
+			kcal = proteins * 4 + fats * 9 + carbohydrates * 4;
+			finish = (kcal * getGram()) / 100;
+			break;
+		case Turkey:
+			proteins = 20;
+			fats = 4;
+			carbohydrates = 0;
+			kcal = proteins * 4 + fats * 9 + carbohydrates * 4;
+			finish = (kcal * getGram()) / 100;
+			break;
+		case Veal:
+			proteins = 28;
+			fats = 2;
+			carbohydrates = 0;
+			kcal = proteins * 4 + fats * 9 + carbohydrates * 4;
+			finish = (kcal * getGram()) / 100;
+			break;
+			
+		case Beijing_cabbage:
+			proteins = 5;
+			fats = 0;
+			carbohydrates = 6;
+			kcal = proteins * 4 + fats * 9 + carbohydrates * 4;
+			finish = (kcal * getGram()) / 100;
+			break;
+		case Сucumber:
+			proteins = 1;
+			fats = 0;
+			carbohydrates = 3;
+			kcal = proteins * 4 + fats * 9 + carbohydrates * 4;
+			finish = (kcal * getGram()) / 100;
+			break;
+		case Avocado:
+			proteins = 2;
+			fats = 20;
+			carbohydrates = 7;
+			kcal = proteins * 4 + fats * 9 + carbohydrates * 4;
+			finish = (kcal * getGram()) / 100;
+			break;
+			
+		case Linseed_oil:
+			proteins = 1;
+			fats = 91;
+			carbohydrates = 1;
+			kcal = proteins * 4 + fats * 9 + carbohydrates * 4;
+			finish = (kcal * getGram()) / 100;
+			break;
+		case Ginger_oil:
+			proteins = 0;
+			fats = 100;
+			carbohydrates = 4;
+			kcal = proteins * 4 + fats * 9 + carbohydrates * 4;
+			finish = (kcal * getGram()) / 100;
+			break;
+		case Teos:
+			proteins = 7;
+			fats = 2;
+			carbohydrates = 4;
+			kcal = proteins * 4 + fats * 9 + carbohydrates * 4;
+			finish = (kcal * getGram()) / 100;
+			break;
+		default:
+			System.out.println("This ingredient isn't on the list");
+		}
+		return finish;
+	}
+}
