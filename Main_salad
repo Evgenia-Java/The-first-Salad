@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main_salad {
+
+	public static void main(String[] args) {
+		
+		Salad hit =new Salad("Hit", new Boiled("Chicken", 100), new Peel_and_chop("Beijing_cabbage", 200),
+				new Peel_and_chop("Avocado", 80), new Peel_and_chop("Ginger_oil", 10));
+		
+		System.out.println(hit);
+		System.out.println();
+		System.out.println();
+		
+		
+		
+
+		ArrayList<Ingredients> salad = new ArrayList<Ingredients>();
+		
+//		salad.add(new Salad()
+//				.setName("With teos")
+//				.setComponent(new Boiled("Turkey", 100))
+//				.setComponent(new Peel_and_chop("Сucumber", 100))
+//				.setComponent(new Peel_and_chop("Teos", 80))
+//				);
+//		System.out.println(salad);
+	}
+}
