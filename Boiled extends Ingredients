@@ -1,0 +1,11 @@
+public class Boiled extends Ingredients {
+	
+	Boiled(String name, int gram) {
+		super(name, gram);
+	}
+	
+	@Override
+	String cooking() {
+		return "Boiled";
+	}
+}
