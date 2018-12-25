@@ -1,0 +1,11 @@
+public class Fried extends Ingredients{
+
+	Fried(String name, int gram) {
+		super(name, gram);
+	}
+
+	@Override
+	String cooking() {
+		return "Fried";
+	}
+}
